@@ -1,0 +1,13 @@
+https://www.codepile.net/pile/4DK7V4D0
+
+Streams API
+
+=PIPELINE
+->sursa de date ->finita(Colectie)
+		->infinita
+     ->obligatorie
+->op.intermediare ->0/1/oricate
+->op.terminala ->TREBUIE sa existe si sa fie una singura(unica)
+
+Interfete functionale -> java.util.function
+
