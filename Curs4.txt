@@ -1,0 +1,68 @@
+Date+Timp
+
+-> java.time
+->inlocuieste java.util.Date
+
+LocalDate -> gestioneaza datele locale
+LocalTime -> gestioneaza ora locala
+LocalDateTime -> date + ore
+ZonedDateTime(ZoneId) -> tine cont de ZoneId
+Period -> ordinul zilelor -> zile, sapt, luni, ani ->P
+Duration -> ord secundelor -> mil, sec, min, ore ->PT
+Instant -> time-stamp curent raportat la GMT
+        -> referinta cronologica universala
+
+-> imutabile
+-> constructorii sunt privati
+
+Internationalizare -> I18N
+Locale 
+1) Constructorul -> limba / limba+regiunea
+2) Builder 
+3) Constante predefinite
+
+Etape parcurse pana se ajunge la MissingResourceException
+fr_CA
+
+1)fr_CA
+2)fr
+3)locala defult -> en_US
+4)en
+5)traduceri.properties -> fisierul default ->doar dupa basename pt bundleul meu 
+6)crape cu exceptie
+
+Collector -> regula de colectare aplicata elementelor de pe Stream ->interfata
+Collectors -> cls utilitara
+collect -> op.terminala
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
