@@ -1,0 +1,78 @@
+Fir de executie = set de instructiuni ce se executa individual si independent de alte seturi de instructiuni din aplicatie
+                = un flow de logica
+Proces = totalitatea firelor de executie + memoria pe care acestea o impart
+Thread = mecanismul in sine de fir de executie ->clasa
+Runnable = interfata -> definea set de instructiuni pe care voiam sa il pun pe Thread
+         = decuplez logica de mecanismul in sine
+         ->interfata functionala
+! start() NU este la run()!
+
+start() -> porneste firul de executie -> il face vizibil pt JVM
+run() -> avem logica ce va fi pusa pe firul de executie(task-ul de indeplinit)
+
+Sincronizarea = procesul prin care impunem ordine in executia firelor
+->am un constructor pe Thread ce primeste tip Runnable
+
+Probleme:
+1) RaceCondition - concureaza pe ac resursa
+2) DeadLock - doua fire se asteapta unul pe celalat -> se blocheaza
+            synchronized(monitorA){          t1,t2    ;    t1 -> A
+                 //instructiuni                            t2 -> B
+                 synchronized(monitorB){              
+		 //alte instructiuni
+                 }
+	    }
+
+ 	   synchronized(monitorB){
+                 //instructiuni
+                 synchronized(monitorA){
+		 //alte instructiuni
+                 }
+	    }
+Firul t1 -> asteapta ca t2 sa eliberze monitorul B
+Firul t2 -> asteapta ca t1 sa elibereze monitorul A
+3) LiveLock ->executia la infinit, consumand nenecesar resurse
+4) Starvation -> nu ajunge sa se execute 
+              ->ex: interfata grafica->prioritate mica
+
+Runnable ->    public void run();
+Callable<T> -> public  T   call() throws Exception;
+
+service.submit(()->Thread.sleep(1000);) ->linia asta de cod nu compileaza
+service.submit(()->{Thread.sleep(1000); return null;}) ->linia asta compileaza
+
+Obiecte de sincronizare/ Obiecte blocante
+
+java.util.concurrent
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
