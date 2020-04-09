@@ -1,0 +1,60 @@
+ReentrantReadWriteLock
+
+-> lock de read(citire)-> se blocheaza accesul pt firele de write, dar se permite pt cele de read
+-> lock de write(modificare) -> se blocheaza accesul pt ambele tipuri
+
+CB -> 2
+ES -> 4
+Task ->3/5 ->nr impar
+
+ForkJoinFramework
+
+->sarcini ce se pot rezolva recursiv, pe mai multe fire de executie si in general, cu Divide et impera
+
+     RecursiveAction                     RecursiveTask<T>
+
+protected void compute();             protected T compute()
+
+      Runnable                           Callable<T>
+
+public void run();                    public T call() throws Exception; 
+
+Observatii:
+
+! conditie de oprire a recursivitatii
+! fork() -> bifurcam executia pe late fire
+! join() -> asteapta dupa firul de executie din care este dereferentiat
+JOIN
+
+DB1 -> 2 sec
+DB2 -> 3 sec
+
+I -> secvential -> 5 sec
+II -> paralel -> 3 sec
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
