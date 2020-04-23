@@ -1,0 +1,74 @@
+Module
+
+= colectii de pachete
+
+Avantaje:
+-expunere selectiva = strong encapsulation
+-verificare dependinte
+*dependinta = biblioteca pe care app noastra o utilizeaza cand ruleaza
+-module-indo.java = fisierul declarativ - de cine are nevoie modulul
+					- ce expune modulul
+-jlink
+compilarea verificare rulare
+
+*java.base - modulul de baza
+     -java.lang
+     -java.util
+     -java.net (URL)
+-orice alt modul depinde implicit de java.base
+
+Java Reflection
+
+class Pisica{
+	int varsta;
+	String nume;
+        void miau();
+}
+
+class Class{
+	Field atribute[];
+	Constructori constr[];
+        Method metode[];
+}
+
+class Field{
+	String nume;
+        Class tipDeData;
+        int modif;
+}
+
+biblioteca -> codul nostru foloseste codul bibliotecii
+framework -> codul framework-ului foloseste codul nostru -> reflection
+
+Java Reflection = mecanism prin care putem sa citim continutul claselor aplicatiei la runtime
+
+Adnotari
+
+=elementul de limbaj folosit pt a specifica metainformatie despre un anumit lucru din cod
+-proprietati
+*adnotari marker -> pot specific cel mult o proprietate
+                  -> pot sa marchez doar clase
+
+Maven
+=tool de impachetare
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
